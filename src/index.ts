@@ -1,5 +1,5 @@
 import { Row } from "./common/types.ts";
-import { formatMoney } from "./common/utils.ts";
+import { formatMoney, isDocumentValid } from "./common/utils.ts";
 import csv from "csv-parser";
 import fs from "fs";
 
@@ -31,9 +31,10 @@ const start = async () => {
     vlIof: formatMoney(parseFloat(row.vlIof)),
     vlDescon: formatMoney(parseFloat(row.vlDescon)),
     vlAtual: formatMoney(parseFloat(row.vlAtual)),
+    nrCpfCnpj: isDocumentValid(row.nrCpfCnpj) ? row.nrCpfCnpj : "Não válido.",
   }));
 
-  //  console.log(formattedMoneyArray);
+  console.log(formattedMoneyArray);
 };
 
-start();
+//start();
