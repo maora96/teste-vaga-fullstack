@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/maora96/teste-vaga-fullstack#readme",
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv-parser": "^3.0.0",
+    "csv-stringify": "^6.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.4",
